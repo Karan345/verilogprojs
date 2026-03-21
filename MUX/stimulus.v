@@ -22,29 +22,37 @@
 
 module stimulus;
     
-    reg clk;
-    reg reset;
-    reg d;
-    wire q;
-    
-    D_FF D1(.q(q), .d(d), .clk(clk), .reset(reset));
-    
-    always begin #5 clk = ~clk; end
-        
+   reg IN0, IN1, IN2, IN3;
+   reg S1, S0;
+
+    wire OUTPUT;
+
+    MUX mux1(OUTPUT, IN0, IN1, IN2, IN3, S1, S0);
+
     initial
     begin
-        $dumpfile("cdff_test.vcd");
+        // Setup for GTKWave: This creates the "dump" file
+        $dumpfile("mux_test.vcd");
         $dumpvars(0, stimulus);
+        //set input lines
+        IN0 = 1; IN1 = 0; IN2 = 1; IN3 = 0;
+        #1 $display("IN0 = %b, IN1 = %b, IN2 = %b, IN3 = %b\n", IN0, IN1, IN2, IN3);
 
-        clk = 0;
-        d = 1;
-        reset = 0;
-        #15 reset = 1;
-        #5 reset = 0;
-        #180 reset = 1;
-        #10 reset = 0;
-        #20 $finish;
-    end
-           
+        //choose IN0
+        S1 = 0; S0 = 0;
+        #1 $display("S1 = %b, S0 = %b, OUTPUT =%b \n", S1, S0, OUTPUT);
+
+        //choose IN0
+        S1 = 0; S0 = 1;
+        #1 $display("S1 = %b, S0 = %b, OUTPUT =%b \n", S1, S0, OUTPUT);
+
+        //choose IN0
+        S1 = 1; S0 = 0;
+        #1 $display("S1 = %b, S0 = %b, OUTPUT =%b \n", S1, S0, OUTPUT);
+
+        //choose IN0
+        S1 = 1; S0 = 1;
+        #1 $display("S1 = %b, S0 = %b, OUTPUT =%b \n", S1, S0, OUTPUT);
+    end           
            
 endmodule
