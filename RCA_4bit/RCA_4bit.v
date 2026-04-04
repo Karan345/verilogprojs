@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module RCA(
-    output sum, c_out,
-    input a, b, c_in
-    
+module RCA_4bit(
+    output [3:0] sum, 
+    output c_out,
+    input [3:0] a, b, 
+    input c_in
     );
     
     //Internal wires
