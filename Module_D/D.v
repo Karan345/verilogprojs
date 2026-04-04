@@ -21,8 +21,8 @@
 
 
 module D(
-    output reg out,
-    input wire a,b,c,
+    output out,
+    input a,b,c
     );
     
     wire e;
