@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 03/14/2026 03:44:23 PM
+// Create Date: 04/04/2026 03:44:23 PM
 // Design Name: 
 // Module Name: stimulus
 // Project Name: 
@@ -22,12 +22,13 @@
 
 module stimulus;
     
-   reg A, B;
+   reg [3:0] A, B;
    reg C_IN;
-   wire sum;
+   wire [3:0] sum;
    wire C_OUT;
 
-   RCA RCA_1(sum, C_OUT, A, B, C_IN);
+   /// 4bit full adder setup
+   RCA_4bit RCA_4bit_1(sum, C_OUT, A, B, C_IN);
 
    initial 
    begin 
@@ -36,14 +37,14 @@ module stimulus;
 
    initial
    begin
-    $dumpfile("rca_test.vcd");
+    $dumpfile("rca4bit_test.vcd");
     $dumpvars(0, stimulus);
-    A = 1'b0; B = 1'b0; C_IN = 1'b0;
-    #5 A = 1'b1; B = 1'b0; C_IN = 1'b0;     
-    #5 A = 1'b0; B = 1'b1; C_IN = 1'b0;     
-    #5 A = 1'b1; B = 1'b1; C_IN = 1'b0;     
-    #5 A = 1'b1; B = 1'b1; C_IN = 1'b1;     
-    #5 A = 1'b1; B = 1'b0; C_IN = 1'b1;     
+       A = 4'd0; B = 4'd0; C_IN = 1'b0;
+    #5 A = 4'd3; B = 4'd4;      
+    #5 A = 4'd4; B = 4'd5;   
+    #5 A = 4'd9; B = 4'd9;  
+    #5 A = 4'd10; B = 4'd15; 
+    #5 A = 4'd10; B = 4'd5; C_IN = 1'b1;     
    end
            
 endmodule

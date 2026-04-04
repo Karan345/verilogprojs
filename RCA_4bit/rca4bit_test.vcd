@@ -1,0 +1,209 @@
+$date
+	Sat Apr  4 17:20:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module stimulus $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " C_OUT $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % C_IN $end
+$scope module RCA_4bit_1 $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 % c_in $end
+$var wire 4 ( sum [3:0] $end
+$var wire 1 " c_out $end
+$var wire 1 ) c3 $end
+$var wire 1 * c2 $end
+$var wire 1 + c1 $end
+$scope module rca1 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 . c1 $end
+$var wire 1 / c2 $end
+$var wire 1 % c_in $end
+$var wire 1 + c_out $end
+$var wire 1 0 s1 $end
+$var wire 1 1 sum $end
+$upscope $end
+$scope module rca2 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 4 c1 $end
+$var wire 1 5 c2 $end
+$var wire 1 + c_in $end
+$var wire 1 * c_out $end
+$var wire 1 6 s1 $end
+$var wire 1 7 sum $end
+$upscope $end
+$scope module rca3 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 : c1 $end
+$var wire 1 ; c2 $end
+$var wire 1 * c_in $end
+$var wire 1 ) c_out $end
+$var wire 1 < s1 $end
+$var wire 1 = sum $end
+$upscope $end
+$scope module rca4 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 @ c1 $end
+$var wire 1 A c2 $end
+$var wire 1 ) c_in $end
+$var wire 1 " c_out $end
+$var wire 1 B s1 $end
+$var wire 1 C sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#5000
+1=
+11
+b111 !
+b111 (
+17
+1<
+10
+16
+19
+1,
+12
+b100 $
+b100 '
+b11 #
+b11 &
+#10000
+1C
+07
+b1001 !
+b1001 (
+0=
+1)
+06
+0<
+1:
+1-
+0,
+02
+18
+b101 $
+b101 '
+b100 #
+b100 &
+#15000
+17
+0C
+b10 !
+b10 (
+01
+1+
+0)
+1"
+00
+1.
+0:
+1@
+09
+1?
+1,
+08
+1>
+b1001 $
+b1001 '
+b1001 #
+b1001 &
+#20000
+1C
+1)
+07
+1;
+b1001 !
+b1001 (
+11
+0+
+1*
+1<
+10
+0.
+14
+13
+19
+0,
+12
+b1111 $
+b1111 '
+b1010 #
+b1010 &
+#25000
+1)
+0=
+1;
+15
+1*
+0C
+1A
+1"
+1+
+16
+04
+1B
+0@
+b0 !
+b0 (
+01
+1/
+03
+0?
+1%
+b101 $
+b101 '
